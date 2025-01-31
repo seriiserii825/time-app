@@ -18,6 +18,11 @@ services:
     volumes:
       - /app/node_modules
       - ./api:/app
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=time_db
   mysql:
     image: mysql
     restart: always
